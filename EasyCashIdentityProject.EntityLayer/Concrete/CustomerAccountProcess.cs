@@ -15,3 +15,11 @@ namespace EasyCashIdentityProject.EntityLayer.Concrete
 
     }
 }
+/*
+ID
+işlem türü
+miktar
+tarih
+alıcı
+gönderen
+ */
