@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EasyCashIdentityProject.DtoLayer.Dtos.AppUserDtos
 {
-    public class AppUserRegisterDtoo
+    public class AppUserRegisterDto
     {
         //[Required(ErrorMessage ="Ad alanı zorunludur.")]
         //[Display(Name = "İsim:")]
