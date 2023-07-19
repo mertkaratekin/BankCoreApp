@@ -18,8 +18,9 @@ namespace EasyCashIdentityProjectPresentationLayer.Controllers
             _customerAccountProcessService= customerAccountProcessService;
         }
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string mycurrency)
         {
+            ViewBag.currency = mycurrency;
             return View();
         }
         [HttpPost]
@@ -40,7 +41,8 @@ namespace EasyCashIdentityProjectPresentationLayer.Controllers
             values.ProcessType = "Havale";
             values.ReceiverID= receiverAccountNumberID;
             values.Amount = sendMoneyForCustomerAccountProcessDto.Amount;
-
+            values.Description = sendMoneyForCustomerAccountProcessDto.Description;
+           
             _customerAccountProcessService.TInsert(values);
 
             return RedirectToAction("Index","Deneme");
